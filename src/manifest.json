@@ -1,0 +1,30 @@
+{
+        "manifest_version": 3,
+        "name": "Help me out",
+        "version": "1.0.1",
+        "action": {
+                "default_popup": "popup.html",
+                "default-title" : "Help Me Out",
+                "default_icon": {             
+                "16": "assets/favicon-16x16.png",   
+                "32": "assets/favicon-32x32.png"   
+        },
+        "icons": {
+                "32": "assets/favicon-32x32.png"   
+        },
+        "background" : {
+                "service_worker": "background.js"
+        },
+        "host_permissions": [
+                "http://*/",
+                "https://*/*"
+        ],
+        "permissions": [
+                "activeTab",
+                "desktopCapture",
+                "storage",
+                "scripting",
+                "tabs"
+        ]
+        }
+}
