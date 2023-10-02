@@ -5,7 +5,7 @@ import close from "../assets/close-circle.svg"
 const Modal = ({show, setShow}) => {
     
   return (
-    <div className={`bg-[#00000052] top-0 left-0 right-0 bottom-0 w-full ${show ? 'flex' : 'hidden'} justify-center items-center absolute`}>
+    <div className={`bg-[#00000052] top-0 left-0 right-0 bottom-0 w-full fixed ${show ? 'flex' : 'hidden'} justify-center items-center`}>
         <div className=' p-14 bg-white max-w-[500px] rounded-[24px] relative flex flex-col gap-8'>
         <img src={close} alt="" className='right-[50px] absolute top-[50px] ' onClick={() => setShow(prev => !prev)}/>
         <div>
