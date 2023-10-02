@@ -67,12 +67,12 @@ const Vide = () => {
 
         </div>
 
-<div className='w-[1px] h-[120vh] mx-[20px] bg-[#BBBBBB] hidden md:block'></div>
+<div className='w-[1px] h-[90vh] mx-[15px] bg-[#BBBBBB] hidden md:block'></div>
 
         <div className='flex-[.6]'>
             <div className='w-[300px] h-[300px] md:block hidden bg-black'></div>
             <div>
-                <p className='font-semibold'>Transcript</p>
+                <p className='font-semibold mt-5'>Transcript</p>
                 <div className='flex gap-4 '>
                     <p className='text-[#CFCFCF]'>English</p>
                     <img src={arr} alt="" />
