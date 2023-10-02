@@ -18,9 +18,12 @@ let chunks = [];
 const baseURL = "https://helpmeout-4ejz.onrender.com"; 
 
 function onAccessApproved(stream) {
-        overlay.style.display = "block";
+        overlay.style.display = "flex";
         recorder = new MediaRecorder(stream);
-        
+
+        startTime = Date.now();
+    timerInterval = setInterval(updateTimer, 1000);
+
         recorder.onstop = function () {
                 clearInterval(intt);
                 overlay.style.display = "none";
@@ -140,15 +143,26 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 const overlay = document.createElement("div");
 overlay.id = "overlay";
-const image = document.createElement('img');
-image.src = './assets/monitor.svg'; 
+// const image = document.createElement('img');
+// image.src = ''; 
 overlay.innerHTML = `
-<div id="recording-time">00:00:00</div>
-<button id="pause-record">Pause</button>
-<button id="stop-record">Stop</button>
+<div style="height: 50px; width: 1px; background-color: #fff"></div>
+<div class="pause" style="padding: 17px; border-radius: 100%; background-color: #fff">
+<img src="https://res.cloudinary.com/dzsomaq4z/image/upload/v1696166602/Icons/ae3ufl4s59dy7tvh0tsb.png" />
+</div>
+<div style="padding: 17px; border-radius: 100%; background-color: #fff">
+<img src="https://res.cloudinary.com/dzsomaq4z/image/upload/v1696166664/Icons/gj2gn1upqjimsgv2j8cz.png"/>
+</div>
+<div style="padding: 15px; border-radius: 100%; background-color: #fff">
+<img src="https://i.ibb.co/3fMGKcc/microphone.png"/>
+</div>
+<div style="padding: 17px; border-radius: 100%; background-color: #4B4B4B">
+<img src="https://i.ibb.co/FzRDG6V/Vector.png"/>
+</div>
+
 `;
 
-overlay.appendChild(image);
+// overlay.appendChild(image);
 // Style the overlay using CSS
 const overlayStyle = `
   position: fixed;
@@ -156,9 +170,12 @@ const overlayStyle = `
   left: 10px;
   background-color: #141414;
   color: white;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 13px;
+  border-radius: 45px;
   z-index: 99;
+  align-items: center;
+  gap: 10px;
+  border: 8px solid #6262622B;
 `;
 
 overlay.style.cssText = overlayStyle;
@@ -167,4 +184,27 @@ overlay.style.cssText = overlayStyle;
 document.body.appendChild(overlay);
 
 const startRecord = document.querySelector(".btn");
-overlay.style.display = "block";
+overlay.style.display = "flex";
+
+const timerElement = document.createElement('div');
+timerElement.id = 'recording-time';
+timerElement.innerText = '00:00:00'; // Initial timer value
+
+let startTime = 0;
+let timerInterval;
+
+// Function to format time in HH:MM:SS format
+function formatTime(seconds) {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const secs = seconds % 60;
+  return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Function to update the timer display
+function updateTimer() {
+  const currentTime = Math.floor((Date.now() - startTime) / 1000);
+  timerElement.innerText = formatTime(currentTime);
+}
+
+overlay.insertBefore(timerElement, overlay.firstChild)

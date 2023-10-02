@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Sora:wght@100;200;300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* === toggle === */
 input[type=checkbox]{
   height: 0;
@@ -126,4 +129,12 @@ color: #120B48;
 }
 .config img{
   cursor: pointer;
+}
+
+.foot div p{
+  color: #fff;
+}
+.foot div{
+  display: grid;
+  gap: 10px;
 }
