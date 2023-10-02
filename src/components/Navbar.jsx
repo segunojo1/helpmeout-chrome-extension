@@ -9,8 +9,8 @@ const Navbar = () => {
             <p>HelpMeOut</p>
         </div>
         <div className='flex gap-5'>
-            <p>Features</p>
-            <p>How it Works</p>
+            <p className='cursor-pointer'>Features</p>
+            <p className='cursor-pointer'>How it Works</p>
         </div>
         <p>Get Started</p>
     </div>

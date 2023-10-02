@@ -34,7 +34,7 @@ function onAccessApproved(stream) {
                                 overlay.style.display = "none";
                         }
                 });
-                window.location.replace("https://helpmeout-vid.netlify.app/")
+                // window.location.replace("https://helpmeout-vid.netlify.app/")
         };
         
         recorder.ondataavailable = function (event) {
