@@ -49,9 +49,11 @@ const Vide = () => {
                         <img src={copy} alt="" />
                         <p>{copySuccess ? 'Copied!' : 'Copy Text'}</p>
                     </div>
+                    <div className='flex md:hidden'>
                     <img src={whats} alt="" />
                     <img src={facebook} alt="" width="40px"/>
                     <img src={telegram} alt="" width="40px"/>
+                    </div>
                 </div>
             </div>
             <div className=' grid gap-3'>
@@ -65,7 +67,7 @@ const Vide = () => {
 
         </div>
 
-<div className='w-[1px] h-[120vh] bg-[#BBBBBB] hidden md:block'></div>
+<div className='w-[1px] h-[120vh] mx-[20px] bg-[#BBBBBB] hidden md:block'></div>
 
         <div className='flex-[.6]'>
             <div className='w-[300px] h-[300px] md:block hidden bg-black'></div>
