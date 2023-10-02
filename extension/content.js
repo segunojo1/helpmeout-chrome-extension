@@ -57,7 +57,7 @@ const sendChunkToBackend = async () => {
                 // Send the base64 data to the backend using fetch or another method
                fetch(recording_url, {
                         method: "POST",
-                        body: JSON.stringify({video: base64}),
+                        body: JSON.stringify(formData),
                         headers: {
                           "Content-Type": "application/json",
                         },
@@ -111,7 +111,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         },
       })
       .then((stream) => {
-                fetch(`${baseURL}/api/recording`, {
+                fetch(`${baseURL}/start-recording`, {
                         method: "POST",
                         body: JSON.stringify({ user_id: "testid" }),
                         headers: {
