@@ -184,7 +184,7 @@ overlay.style.cssText = overlayStyle;
 document.body.appendChild(overlay);
 
 const startRecord = document.querySelector(".btn");
-overlay.style.display = "flex";
+overlay.style.display = "none";
 
 const timerElement = document.createElement('div');
 timerElement.id = 'recording-time';
