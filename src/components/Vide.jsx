@@ -5,6 +5,7 @@ import whatsapp from "../assets/whatsapp.svg"
 import telegram from "../assets/telegram.svg"
 import arr from "../assets/arrow-down.svg"
 import whats from "../assets/whatsapp1.svg"
+import vid from "../assets/video.png"
 import Social from './Social'
 
 const Vide = ({setShow}) => {
@@ -29,7 +30,8 @@ const Vide = ({setShow}) => {
                 <p className=' font-semibold'>Untitled_Video_20232509 </p>
             </div>
 
-            <div className='w-[300px] h-[300px] bg-black block md:hidden m-auto'></div>
+            {/* <div className='w-[300px] h-[300px] bg-black block md:hidden m-auto'></div> */}
+            <img src={vid} alt="" className='block md:hidden m-auto'/>
             <div className='relative flex flex-col justify-center'>
             <input 
             type="text" 
@@ -69,8 +71,8 @@ const Vide = ({setShow}) => {
 
 <div className='w-[1px] h-[90vh] mx-[15px] bg-[#BBBBBB] hidden md:block'></div>
 
-        <div className='flex-[.6]'>
-            <div className='w-[300px] h-[300px] md:block hidden bg-black'></div>
+        <div className=''>
+            <img src={vid} alt="" className='hidden md:block w-[400px]'/>
             <div>
                 <p className='font-semibold mt-5'>Transcript</p>
                 <div className='flex gap-4 '>
