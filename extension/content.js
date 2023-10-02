@@ -157,9 +157,7 @@ overlay.innerHTML = `
 <div style="padding: 15px; border-radius: 100%; background-color: #fff">
 <img src="https://i.ibb.co/3fMGKcc/microphone.png"/>
 </div>
-<div style="padding: 17px; border-radius: 100%; background-color: #4B4B4B">
-<img src="https://i.ibb.co/FzRDG6V/Vector.png"/>
-</div>
+
 
 `;
 
@@ -207,5 +205,17 @@ function updateTimer() {
   const currentTime = Math.floor((Date.now() - startTime) / 1000);
   timerElement.innerText = formatTime(currentTime);
 }
+
+const deleteElem = document.createElement('div');
+deleteElem.id = 'delete';
+deleteElem.style = "padding: 17px; border-radius: 100%; background-color: #4B4B4B"
+
+overlay.appendChild(deleteElem);
+const imgg = document.createElement('img');
+imgg.src = "https://i.ibb.co/FzRDG6V/Vector.png"
+deleteElem.appendChild(imgg);
+deleteElem.addEventListener("click", () => {
+        recorder.s
+})
 
 overlay.insertBefore(timerElement, overlay.firstChild)
