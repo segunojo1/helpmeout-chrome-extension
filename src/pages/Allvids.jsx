@@ -5,7 +5,7 @@ import vid2 from "../assets/card2.png"
 
 const Allvids = () => {
   return (
-    <div className='px-12 '>
+    <div className='px-32 '>
         <img src={nav} alt="" className='p-6 ' />
         <div className='flex justify-between'>
             <div>

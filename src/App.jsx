@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Auth from './pages/Auth'
 import Allvids from './pages/Allvids'
+import SingleVid from './pages/SingleVid'
 
 function App() {
 
@@ -11,9 +12,10 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<Home />}/>
+      <Route path='/' element={<SingleVid />}/>
       <Route path='/signin' element={<Auth />}/>
-      <Route path='/vids' element={<Allvids />}/>
+      <Route path='/id' element={<Home />}/>
+      <Route path='/videos' element={<Allvids />}/>
     </Routes>
     </BrowserRouter>
       
