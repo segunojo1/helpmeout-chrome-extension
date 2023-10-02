@@ -7,7 +7,7 @@ import arr from "../assets/arrow-down.svg"
 import whats from "../assets/whatsapp1.svg"
 import Social from './Social'
 
-const Vide = () => {
+const Vide = ({setShow}) => {
     const [textToCopy, setTextToCopy] = useState('https://www.helpmeout/Untitled_');
   const [copySuccess, setCopySuccess] = useState(false);
 
@@ -35,7 +35,7 @@ const Vide = () => {
             type="text" 
             placeholder='enter email of receiver'
             className='p-4 bg-[#E7E7ED] w-full rounded-[5px]'/>
-            <div className='bg-[#605C84] p-2 w-fit absolute height-fit right-2 rounded-[8px] m-auto'>Send</div>
+            <div className='bg-[#605C84] p-2 w-fit absolute height-fit right-2 rounded-[8px] m-auto' onClick={() => setShow(prev => !prev)}>Send</div>
             </div>
             <p className='text-[#727272] text-center md:hidden block'>Your video to johnmark@gmail.com is now ready.     Not the receiver?</p>
             <div className='flex flex-col items-start gap-2'>
