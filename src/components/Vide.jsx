@@ -37,7 +37,7 @@ const Vide = () => {
             className='p-4 bg-[#E7E7ED] w-full rounded-[5px]'/>
             <div className='bg-[#605C84] p-2 w-fit absolute height-fit right-2 rounded-[8px] m-auto'>Send</div>
             </div>
-            <p className='text-[#727272] text-center'>Your video to johnmark@gmail.com is now ready.     Not the receiver?</p>
+            <p className='text-[#727272] text-center md:hidden block'>Your video to johnmark@gmail.com is now ready.     Not the receiver?</p>
             <div className='flex flex-col items-start gap-2'>
                 <p className='font-semibold md:block hidden'>Video Url</p>
                 <div className='flex bg-[#FAFAFA] gap-3 p-2 items-center md:border-[1px] border-[#929292] rounded-[16px]'>
