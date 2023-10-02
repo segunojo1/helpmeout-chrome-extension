@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../assets/favicon-32x32.png"
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -12,7 +13,7 @@ const Navbar = () => {
             <p className='cursor-pointer'>Features</p>
             <p className='cursor-pointer'>How it Works</p>
         </div>
-        <p>Get Started</p>
+        <Link to="/signin" className=''>Get Started</Link>
     </div>
   )
 }

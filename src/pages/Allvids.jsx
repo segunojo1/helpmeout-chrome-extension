@@ -19,13 +19,13 @@ const Allvids = () => {
         <p className='font-bold'>Recent files</p>
         <div>
             <div className='gap-5 rounded-md flex mt-10 justify-between'>
-                <img src={vid} alt=""  className='w-[500px]'/>
-                <img src={vid2} alt=""  className='w-[500px]'/>
+                <img src={vid} alt=""  className='w-[500px] cursor-pointer'/>
+                <img src={vid2} alt=""  className='w-[500px] cursor-pointer'/>
             </div>
             <p className='mt-9 font-bold'>Files from last week</p>
             <div className='gap-5 rounded-md flex mt-10 justify-between'>
-                <img src={vid} alt=""  className='w-[500px]'/>
-                <img src={vid2} alt=""  className='w-[500px]'/>
+                <img src={vid} alt=""  className='w-[500px] cursor-pointer'/>
+                <img src={vid2} alt=""  className='w-[500px] cursor-pointer'/>
             </div>
         </div>
     </div>
