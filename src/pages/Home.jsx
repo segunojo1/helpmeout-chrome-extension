@@ -26,11 +26,11 @@ const Home = () => {
             </div>
             <div className='flex gap-4 relative'>
                 <div className='gap-4 flex flex-col'>
-                <img src={woman} alt="" className=' w-[270px] z-10'/>
-                <img src={fss} alt="" className=' w-[270px] z-10'/>
+                <img src={woman} alt="" className=' w-[270px] z-10 rounded-md'/>
+                <img src={fss} alt="" className=' w-[270px] z-10 rounded-md'/>
                 </div>
                 <div className='flex'>
-                <img src={woman2} alt="" className=' w-[263px] z-10 flex'/>
+                <img src={woman2} alt="" className=' w-[263px] z-10 flex rounded-md'/>
                 </div>
                 <img src={gri} alt="" className='absolute right-[-45px] top-[-55px] z-0 w-[300px]'/>
                 <img src={gri2} alt="" className='absolute left-[-45px] bottom-[-60px] z-0 w-[300px]'/>
