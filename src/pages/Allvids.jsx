@@ -2,6 +2,7 @@ import React from 'react'
 import nav from "../assets/nav.png"
 import vid from "../assets/card1.png"
 import vid2 from "../assets/card2.png"
+import { Link } from 'react-router-dom'
 
 const Allvids = () => {
   return (
@@ -19,13 +20,21 @@ const Allvids = () => {
         <p className='font-bold'>Recent files</p>
         <div>
             <div className='gap-5 rounded-md flex mt-10 justify-between'>
+                <Link to="/videodetails">
                 <img src={vid} alt=""  className='w-[500px] cursor-pointer'/>
+                </Link>
+                <Link to="/videodetails">
                 <img src={vid2} alt=""  className='w-[500px] cursor-pointer'/>
+                </Link>
             </div>
             <p className='mt-9 font-bold'>Files from last week</p>
             <div className='gap-5 rounded-md flex mt-10 justify-between'>
+                <Link to="/videodetails">
                 <img src={vid} alt=""  className='w-[500px] cursor-pointer'/>
+                </Link>
+                <Link to="/videodetails">
                 <img src={vid2} alt=""  className='w-[500px] cursor-pointer'/>
+                </Link>
             </div>
         </div>
     </div>

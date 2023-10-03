@@ -62,8 +62,8 @@ const sendChunkToBackend = async () => {
                         headers: {
                           "Content-Type": "application/json",
                         },
-                }).then(response => response.json())
-                .then(data => console.log(data))
+                }).then((response) => response.json())
+                .then((data) => console.log(data))
                 .catch(err => console.error("err sending chunk", err))
                 
                 // Clear the chunks array
